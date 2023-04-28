@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>미래엔 WebGL Test</title>
+</head>
+
+<body style="margin: 0; padding: 0; width: 100vw; height: 100vh"> 
+  <iframe class="viewer_iframe" width ="100%" hieght ="100%" src = "https://2monsterslab.github.io/TestWebGL/b451001021/index.html" frameborder="0" allowfullscreen style="position: absolute; left: 0; top: 0; width: 100vw;  height: 69.8vw;"></iframe>
+  
+  <script>
+    let winWidth;
+    let winHeight;
+    const viewFrame = document.querySelector('.viewer_iframe');
+    
+    function modeWin(){
+      winWidth = window.innerWidth;
+      winHeight = window.innerHeight;
+      if (winWidth/winHeight <= 1.432 ) {
+        /* 가로 */
+        viewFrame.style.width = "100vw";
+        viewFrame.style.height = "69.8vw";
+        
+      } else {
+        /* 세로 */
+        viewFrame.style.width = "143.2vh";
+        viewFrame.style.height = "100vh";
+      }
+    }
+    modeWin();
+    window.addEventListener("resize", modeWin);
+  </script>
+  
+</body>
+</html>
